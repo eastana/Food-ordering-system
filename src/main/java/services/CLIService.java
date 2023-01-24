@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Slf4j
-public class CLIService implements AutoCloseable {
+public class CLIService {
     private final Scanner sc = new Scanner(System.in);
 
     private final Order orderMenu;
@@ -114,7 +114,6 @@ public class CLIService implements AutoCloseable {
             close();
         }
     }
-    @Override
     public void close() {
         order.setLunches(lunchList);
         order.setDrinks(drinkList);

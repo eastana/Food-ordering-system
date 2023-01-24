@@ -6,8 +6,7 @@ import services.OrderInitializationService;
 public class Main {
     public static void main(String[] args) throws Exception {
         log.info("Application starting...");
-        CLIService service = new CLIService(new OrderInitializationService().createOrderMenu());
-        service.run();
+        new CLIService(new OrderInitializationService().createOrderMenu()).run();
         log.info("Closing application...");
     }
 }
